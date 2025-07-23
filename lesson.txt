@@ -1,0 +1,28 @@
+            Object methods
+
+
+function capitilizase 
+
+
+function capitilize(string){
+    let array =string.split(" ");
+    
+    let res =array.map(value=> {
+
+        let value2 =value.splice(1)
+
+        return value[0].toUpperCase() + value2;
+    })
+
+    return res.join(" ")
+}
+
+
+
+
+function wovelCount(string){
+    let matn ="salom mening ismim";
+    let vowlarray =["0", "e", "i", "a"];
+    
+    let arr =string.split("")
+}
