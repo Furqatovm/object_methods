@@ -26,3 +26,137 @@ function wovelCount(string){
     
     let arr =string.split("")
 }
+
+
+
+Prototype nima 
+prototype bu arrayning methodlari saqlanadigan object
+va .bilan chaqiriliadi
+
+
+biza o'zimiz unga yangi method qo'shsakham bo'ladi  va u funktionga teng bo'lishi kerak 
+va har doim funkstion decloration bo'lishi kerak chunki arrow funksion bilan bajarsak this ishlamiydi
+
+this nimaga charisilsa o'shanga teng bo'ladi 
+
+agar this global holatda chaqirilsa windowga teng bo'ladi va eng katta object window
+
+
+
+
+
+                Object nima
+object key va valuedan tashkil topgan 
+arraydan 2 xili usulda qiymat ola  olamiz
+dot notation  =. 
+bracket notation   =[]
+
+Bizada hamma narsa object bo'lad oladi
+masalan ruchka
+
+biz backendagi ma'lumotlar object yoki array ichida object ko'rinishida keladi
+
+object yaratish usullari
+
+let person = {
+    name: "olim",
+    surname: "Olimov",
+    age: 24,
+    married: false,
+    location : {
+        city: "toshketn"
+        country : "uzbekistan"
+    }
+};
+
+bu literal ko'rinishida 
+
+bundan tashqari constructor yordamida yasasa bo'ladi 
+2-usul function decloration 
+function Person1(name, age, married) {
+    this.name =name;
+    this.age =age;
+    this.married =married;
+}
+
+
+Let person1 =new Person("Teshavali", 18, true);
+console.log(person1);
+
+
+person.age dot notaion 
+person[age] dot notation
+
+
+
+agar 2 ta bir xil key bo'lsa objectni overriding qivoradi ya'ni yangisini eskisini ustiga yozib yuboradi
+
+
+
+let name ="sotaqozi";
+
+
+objectdan ma'lumotlarni o'chirish
+delete person.age ;
+bu esa qiymatini o'zgartirish
+person.age =40;
+person.color ="oq zodagonlarda";
+bu element qo'shadi
+
+
+
+                        Object methodlari
+
+Object.freeze(person);
+delete person.age  bu kod objectni muzlatib qo'yadi o'chirish qo'shish editing qilish mumkin emas
+person.age =23;
+
+seal bu xuddi sealga o'xhaydi faqat faqat editing qilishga ruxsat bor 
+delete add ga ruxsat yo'q
+delete person.age;
+person.yosh =29;
+
+Object ichida yaratilga funksiyalar method deyiladi
+let personPrototype ={
+    greet: function (){
+        console.log("Hello, my name is " + this.name +". I am " +this.age +" years old ")
+    },
+}
+
+let person2 =Object.create(personPrototype);
+person2.name ="olim";
+person2.name ="salom";
+
+console.log(person2.greet());
+
+console.log(Object.keys(person));
+console.log(Object.values(person));
+
+entries bu array ichida arrayga bitta key bitta va'lue qilib beradi
+console.log(Object.entries(person));
+
+
+
+object defineporperty
+Bu nima degani bu biza objectga bitta element qo'shib uni muzlatib qo'ysak bo'ladi
+let car = {
+    name: "bms",
+    color: "red",
+    speed: 300,
+};
+
+Object.defineporperty(car, "maxPrice", {
+    value : "110 000 $"
+    writetable : true,
+    configurable: false,
+    emurable : true,
+})
+emurable bu iteratsiya qilinganda ko'ridai
+configurable  bu o'chirib bo'lmaydi degani
+writetable editing allowed yoki yo'q degani
+
+
+iteratsiya turlari 
+string arry 
+qolgan boshqa narsalarni iteratsiya qilib bo'lmaydi
+object qisman iterable
