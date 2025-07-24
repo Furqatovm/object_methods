@@ -1,0 +1,313 @@
+*,html{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.3s linear;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0rem 2rem;
+}
+
+#desktop{
+    background-color: #121214;
+    padding: 2rem 0rem;
+}
+
+.wrappper-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.nav{
+    display: flex;
+    gap: 3rem;
+}
+.nav-child{
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 14px;
+}
+
+.header-right{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.phone{
+    display: flex;
+    gap: 7px;
+    align-items: center;
+}
+
+.phone .nav-child{
+    color: #8C8F96;
+}
+
+.nav-child:hover{
+    cursor: pointer;
+    color: orangered;
+}
+
+.header-right{
+    color: white;
+}
+
+.header-right svg:hover{
+    cursor: pointer;
+    color: orangered;
+}
+
+select{
+    background-color: transparent;
+    color: white;
+    border: none;
+    outline: none;
+}
+
+option{
+    background-color: #121214;
+}
+
+
+
+select:hover{
+    cursor: pointer;
+    color: orangered;
+}
+
+
+#desktop{
+    display: flex;
+}
+
+#mobile{
+    display: none;
+    background-color: #121214;
+    padding: 2rem 0rem;
+}
+
+#mobile-nav{
+    display: none;
+}
+
+
+#open{
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.logo{
+    width: 84px;
+}
+
+.wrapper-hero{
+    background-image: url(./assets/rotateddd.jpg);
+    width: 100%;
+    height: 80vh;
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    max-width: 1300px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+    border-radius: 7px;
+}
+
+.hero-content{
+    padding: 	4rem;
+    width: 45%;
+}
+
+.main-sarlavha{
+    font-size: 	3.1875rem;
+    line-height: 61px;
+    color: #171819;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.hero-matn{
+    font-size: 19px;
+    color: #121214;
+    line-height: 32px;
+}
+
+.hero-btn{
+    font-size: 12px;
+    font-weight: 800;
+    color: white;
+    text-transform: uppercase;
+    line-height: 20px;
+    background-color: #121214;
+    padding: 1.5rem 2rem;
+    border-radius: 5px;
+    border: 2px solid transparent;
+}
+
+.hero-btn:hover{
+    background-color: transparent;
+    color: #121214;
+    border-color: #121214;
+    cursor: pointer;
+}
+
+.before{
+    font-size: 1.2rem;
+    padding: 1.5rem;
+    border-radius: 50%;
+    width: 67px;
+    height: 67px;
+    background-color: #ffffff;
+    border: none;
+    cursor: pointer;
+}
+
+.wrapper-next{
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.hero-content{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+
+.second-sarlavha{
+    font-size: 2rem;
+    color: #121214;
+    font-weight: 900;
+}
+
+
+.second-link{
+    font-size: 14px;
+    font-weight: 800;
+    color: #121214;
+    text-transform: uppercase;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #121214;
+    text-decoration: none;
+}
+
+.second-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.second{
+    margin-top: 5rem;
+}
+
+.wrapper-cards{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.card{
+    width: 23%;
+}
+
+
+.card img{
+    width: 100%;
+}
+
+.wrap-img{
+    position: relative;
+    overflow: hidden;
+}
+.ab{
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    z-index: 3;
+}
+
+.ab:hover{
+    color: red;
+    cursor: pointer;
+}
+
+.card-sar{
+    font-size: 19px;
+    text-transform: uppercase;
+    color: #000000;
+    font-weight: 700;
+}
+
+.card-span{
+    color: #3C3C3C;
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 5px;
+}
+
+
+.rasm:hover{
+    transform: scale(1.2);
+}
+@media (max-width: 768px){
+    #desktop{
+        display: none;
+    }
+
+    #mobile{
+        display: flex;
+    }
+
+    .wrapper-hero{
+        max-width: 768px;
+        padding: 0rem 1rem;
+        margin: 0 auto;
+        background-position: right;
+        padding-top: 4rem;
+        width: 100%;
+        height: 90vh;
+    }
+
+
+    .main-sarlavha{
+        font-size: 3rem;
+        line-height: 54px;
+    }
+
+    .hero-content{
+        width: 70%;
+        padding: 0;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .wrapper-cards{
+        overflow-x: auto;
+        gap: 1rem;
+    }
+
+    .wrapper-cards::-webkit-scrollbar{
+        display: none;
+    }
+
+    .card{
+        min-width: 50%;
+    }
+
+
+}
+
