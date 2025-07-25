@@ -125,17 +125,17 @@ select:hover{
     max-width: 1300px;
     margin-right: auto;
     margin-left: auto;
-    height: 80vh;
 }
 
 .swiper-slide{
     background-image: url(./assets/rotateddd.jpg);
+    overflow: hidden;
     max-width: 1300px;
     margin-right: auto;
     margin-left: auto;
     padding-right: 1rem;
     padding-left: 1rem;
-    background-position: left;
+
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
@@ -205,7 +205,7 @@ select:hover{
     flex-direction: column;
     gap: 1.2rem;
     align-items: flex-start;
-    max-width: 40%;
+    width: 40%;
 }
 
 
@@ -230,6 +230,124 @@ select:hover{
 }
 
 
+#second{
+    background-image: url(https://wallpaperaccess.com/full/1448067.jpg);
+}
+
+#third{
+    background-image: url(https://wallpaperaccess.com/full/6747406.jpg);
+}
+
+.shoes-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 5rem;
+}
+.shoes{
+    margin-top: 6rem;
+}
+
+.secondary-header{
+    color: #121214;
+    font-size: 2rem;
+    font-weight: 900;
+}
+.link{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: #000000;
+    text-transform: uppercase;
+    font-weight: 900;
+    padding-bottom: 6px;
+    text-decoration: none;
+    border-bottom: 2px solid #000000;
+}
+
+.link:hover{
+    color: orangered;
+    cursor: pointer;
+    border-color: orangered;
+}
+
+.wrap-img{
+    position: relative;
+    overflow: hidden;
+    max-height: 318px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.svg{
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+}
+
+.svg:hover{
+    color: red;
+    cursor: pointer;
+}
+
+.shoe-sarlavha{
+    font-size: 19px;
+    color: #000000;
+    text-transform: uppercase;
+}
+
+.shoe-span{
+    color: #3C3C3C;
+}
+
+.shoe{
+    width: 23%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.rasm{
+    width: 100%;
+}
+
+.rasm:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.wrapper-shoe{
+    display: flex;
+    justify-content: space-between;
+}
+
+.wrap-arr{
+    max-width: 265px;
+    margin: 0 auto;
+    align-items: center;
+    gap: 2.2rem;
+    display: flex;
+    margin-top: 3rem;
+}
+.aylana-smaller{
+    width: 10px;
+    height: 10px;
+    background-color: #121214;
+    border-radius: 50%;
+    padding: 5px;
+}
+.smallest{
+    width: 6px;
+    height: 6px;
+    background-color: #121214;
+    border-radius: 50%;
+    opacity: 70%;
+    padding: 3px;
+}
 
 
 
@@ -260,8 +378,60 @@ select:hover{
         line-height: 54px;
     }
 
+    .swiper-slide{
+        width: 100%;
+    }
 
+    .wrapper-hero-content{
+        width: 50%;
+    }
+    .swiper-slide{
+        padding: 2rem 1rem;
+    }
+    .swiper-wrapper{
+        margin-top: 2rem;
+    }
+    .swiper{
+        height: 100vh;
+        background-position: center;
+    }
+
+    .shoe{
+        width: 43%;
+        margin-top: 2rem;
+    }
+    .wrapper-shoe{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .main-sarlavha{
+        font-size: 2.2rem;
+        line-height: 43px;
+    }
+    .swiper-slide{
+        background-position: center;
+    }
+    
+    
 
 
 }
 
+
+
+@media (max-width: 500px){
+    .wrapper-hero-content{
+        width: 100%;
+    }
+    .shoe{
+        width: 45%;
+    }
+    .main-sarlavha{
+        font-size: 1.7rem;
+        list-style: 31px;
+    }
+    .swiper-slide{
+        background-position: center;
+    }
+}
