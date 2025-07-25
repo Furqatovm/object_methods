@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     transition: all 0.3s linear;
+    font-family: "Roboto", sans-serif;
 }
 
 .container{
@@ -107,162 +108,133 @@ select:hover{
     width: 84px;
 }
 
-.wrapper-hero{
-    background-image: url(./assets/rotateddd.jpg);
-    width: 100%;
-    height: 80vh;
-    /* background-position: center; */
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
+.son{
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: blue;
+    border-radius: 50%;
+    padding: 10px;
+    font-size: 14px;
+    color: white;
+}
+
+.swiper{
     max-width: 1300px;
     margin-right: auto;
     margin-left: auto;
-    width: 100%;
-    border-radius: 7px;
+    height: 80vh;
 }
 
-.hero-content{
-    padding: 	4rem;
-    width: 45%;
+.swiper-slide{
+    background-image: url(./assets/rotateddd.jpg);
+    max-width: 1300px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    background-position: left;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    padding: 5.625rem;
+    height: 100%;
+}
+.swiper-wrapper{
+    margin-top: 4rem;
+    margin-top: 4rem;
 }
 
 .main-sarlavha{
     font-size: 	3.1875rem;
-    line-height: 61px;
+    font-weight: 900;
     color: #171819;
     text-transform: uppercase;
-    font-weight: 900;
+    line-height: 63px;
 }
-
-.hero-matn{
-    font-size: 19px;
+.matn{
     color: #121214;
+    font-size: 19px;
     line-height: 32px;
+    font-weight: 400;
 }
 
-.hero-btn{
+.general-btn{
     font-size: 12px;
     font-weight: 800;
     color: white;
-    text-transform: uppercase;
-    line-height: 20px;
+    padding: 1.2rem 2rem;
     background-color: #121214;
-    padding: 1.5rem 2rem;
-    border-radius: 5px;
-    border: 2px solid transparent;
+    border: 2px solid #121214;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-.hero-btn:hover{
+.general-btn:hover{
     background-color: transparent;
     color: #121214;
-    border-color: #121214;
-    cursor: pointer;
+    background-color: white;
+    border-color: transparent;
 }
 
-.before{
-    font-size: 1.2rem;
-    padding: 1.5rem;
-    border-radius: 50%;
+.wrapper-chev{
+    padding: 1rem;
     width: 67px;
     height: 67px;
-    background-color: #ffffff;
-    border: none;
-    cursor: pointer;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
 }
 
 .wrapper-next{
     display: flex;
+    align-items: center;
     gap: 1rem;
     margin-top: 2rem;
 }
 
-.hero-content{
+.wrapper-hero-content{
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
     align-items: flex-start;
-    justify-content: space-between;
+    max-width: 40%;
 }
 
 
-.second-sarlavha{
-    font-size: 2rem;
-    color: #121214;
-    font-weight: 900;
+.swiper-button-prev::after{
+    color: white;
 }
 
 
-.second-link{
-    font-size: 14px;
-    font-weight: 800;
-    color: #121214;
-    text-transform: uppercase;
-    padding-bottom: 5px;
-    border-bottom: 2px solid #121214;
-    text-decoration: none;
+.swiper-button-next::after{
+    color: white;
 }
 
-.second-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-
-.second{
-    margin-top: 5rem;
-}
-
-.wrapper-cards{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-}
-.card{
-    width: 23%;
-}
-
-
-.card img{
-    width: 100%;
-}
-
-.wrap-img{
-    position: relative;
-    overflow: hidden;
-}
-.ab{
-    position: absolute;
-    top: 5%;
-    right: 5%;
-    z-index: 3;
-}
-
-.ab:hover{
-    color: red;
+.wrapper-chev:hover{
+    background-color: #121214;
+    color: white;
+    border-color: transparent;
     cursor: pointer;
 }
 
-.card-sar{
-    font-size: 19px;
-    text-transform: uppercase;
-    color: #000000;
-    font-weight: 700;
-}
-
-.card-span{
-    color: #3C3C3C;
-    font-size: 14px;
-    font-weight: 400;
-    margin-top: 5px;
+.swiper-pagination::after{
+    background-color: white;
 }
 
 
-.rasm:hover{
-    transform: scale(1.2);
-}
+
+
+
+
+
 @media (max-width: 768px){
     #desktop{
         display: none;
@@ -288,25 +260,7 @@ select:hover{
         line-height: 54px;
     }
 
-    .hero-content{
-        width: 70%;
-        padding: 0;
-        align-items: flex-start;
-        justify-content: center;
-    }
 
-    .wrapper-cards{
-        overflow-x: auto;
-        gap: 1rem;
-    }
-
-    .wrapper-cards::-webkit-scrollbar{
-        display: none;
-    }
-
-    .card{
-        min-width: 50%;
-    }
 
 
 }
