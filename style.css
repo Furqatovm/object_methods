@@ -6,6 +6,10 @@
     font-family: "Roboto", sans-serif;
 }
 
+body{
+    overflow-x: hidden;
+}
+
 .container{
     max-width: 1200px;
     margin: 0 auto;
@@ -40,7 +44,7 @@
     align-items: center;
 }
 
-.phone{
+.tel{
     display: flex;
     gap: 7px;
     align-items: center;
@@ -165,7 +169,8 @@ select:hover{
     font-size: 12px;
     font-weight: 800;
     color: white;
-    padding: 1.2rem 2rem;
+    padding: 1rem 3rem;
+    border-radius: 5px;
     background-color: #121214;
     border: 2px solid #121214;
     cursor: pointer;
@@ -357,15 +362,22 @@ select:hover{
 
 .phone{
     background: linear-gradient(to right, #0D99F8, #21A0F8, #54B5FF, #0DBBF8, #0DDBF8);
+    border-radius: 7px;
+    position: relative;
 }
 
 .phone-left{
-    width: 55%;
-    padding: 5.625rem;
+    width: 65%;
+    display: flex;
+    padding-left: 3rem;
+    flex-direction: column;
+    gap: 1.3rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
 }
 
 .phone-right{
-    width: 40%;
+    width: 30%;
 }
 
 .phone .main-sarlavha{
@@ -378,14 +390,128 @@ select:hover{
     color: white;
 }
 
-.one span{
+.one div{
     font-size: 1.5rem;
     color: white;
     border: 2px solid white;
     background-color: transparent;
     border-radius: 50%;
-    padding: 1rem;
+    padding: 0.2rem 2rem;
+    width: 77px;
+    height: 77px;
     display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.one-matn{
+    font-size: 1rem;
+    line-height: 22px;
+    font-weight: 600;
+    color: white;
+}
+
+.one{
+    display: flex;
+    gap: 1.3rem;
+    align-items: center;
+}
+
+.ora{
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+}
+
+
+.phone-left .wrapper-btn{
+    margin-top: 1rem;
+}
+
+
+.im{
+    width: 150%;
+}
+
+
+.phone{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;  
+    margin-top: 6rem;  
+    margin-bottom: -10rem;
+}
+
+.phone-right{
+    position: absolute;
+    top: -18%;
+    right: 10%;
+}
+
+
+.forth{
+    background-color: #f4f5f6;
+}
+
+
+.forth-sarlavha{
+    font-size: 2.5rem;
+    color: #121214;
+    line-height: 48px;
+    font-weight: 900;
+}
+
+.forth-matn{
+    font-size: 1rem;
+    color: #303030;
+    line-height: 30px;
+}
+.forth-left{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 65%;
+}
+.forth-right{
+    width: 30%;
+}
+
+.wrapper-forth{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 12rem;
+    padding-bottom: 6rem;
+}
+
+.forth-right{
+    padding: 2.3rem;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 1.9rem;
+    border-radius: 5px;
+}
+
+.bir-sar{
+    font-size: 13px;
+    text-transform: uppercase;
+    color: #121214;
+    font-weight: 900;
+}
+
+.bir-matn{
+    font-size: 14px;
+    color: #303030;
+    font-weight: 400;
+    line-height: 20px;
+    margin-top: 4px;
+}
+
+.bir{
+    display: flex;
+    gap: 1.7rem;
 }
 
 
@@ -393,8 +519,39 @@ select:hover{
 
 
 
+@media (max-width: 1300px){
+    .im{
+        width: 100%;
+    }
+
+    .phone-right{
+        top: 0;
+        right: 5%;
+    }
+}
 
 
+
+
+@media (max-width: 1000px){
+    .phone{
+        display: flex;
+        flex-direction: column;
+        padding-left: 0rem;
+        padding-right: 2rem;
+        gap: 1rem;
+    }
+    .phone-left{
+        width: 100%;
+    }
+    .phone-right{
+        width: 100%;
+        position: unset;
+    }
+    .phone-left{
+        padding-bottom: 0;
+    }
+}
 
 
 
@@ -458,7 +615,26 @@ select:hover{
     .swiper-slide{
         background-position: center;
     }
-    
+    .wrapper-forth{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .forth-left{
+        width: 100%;
+    }
+    .forth-right{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .bir{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
     
 
 
@@ -479,5 +655,14 @@ select:hover{
     }
     .swiper-slide{
         background-position: center;
+    }
+    .forth-right{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .bir{
+        display: flex;
+        flex-direction: row;
     }
 }
